@@ -82,9 +82,10 @@ def route_algoritm(start: str, end: str, graph: list):
                             unvisited_nodes[new_neighbor[0]][0] = total_length
                             unvisited_nodes[new_neighbor[0]][1] = visited_nodes[neighbor[0]][1] + new_neighbor[0]
 
-# graph = [ ['A', 'B', 4],['A', 'C', 3],['A', 'E', 7], ['B', 'A', 4],['B', 'C', 6],['B', 'D', 5], ['C', 'A', 3], ['C', 'B', 6], ['C', 'D', 11], ['C', 'E', 8],['D', 'B', 5],['D', 'C', 11],['D', 'E', 2],['D', 'G', 10],['D', 'F', 2],  ['E', 'A', 7], ['E', 'C', 8], ['E', 'D', 2], ['E', 'G', 5],  ['F', 'D', 2], ['F', 'G', 3], ['G', 'D', 10],['G', 'E', 5],['G', 'F', 3] ]
-graph = [ ['A', 'F', 1], ['A', 'G', 8], ['A', 'B', 3], ['B', 'A', 3], ['B', 'C', 4], ['B', 'D', 1], ['B', 'F', 1], ['B', 'G', 6], ['C', 'B', 4], ['C', 'D', 1], ['C', 'E', 2], ['D', 'B', 1], ['D', 'C', 1], ['D', 'E', 5], ['E', 'C', 2], ['E', 'D', 5], [ 'F', 'A', 1], ['F', 'B', 1], ['G', 'A', 8], ['G', 'B', 6]  ]
 
-(route, distance) = route_algoritm('A', 'E', graph)
-print_info((route,distance))
-
+def Main():
+    # graph = [ ['A', 'B', 4],['A', 'C', 3],['A', 'E', 7], ['B', 'A', 4],['B', 'C', 6],['B', 'D', 5], ['C', 'A', 3], ['C', 'B', 6], ['C', 'D', 11], ['C', 'E', 8],['D', 'B', 5],['D', 'C', 11],['D', 'E', 2],['D', 'G', 10],['D', 'F', 2],  ['E', 'A', 7], ['E', 'C', 8], ['E', 'D', 2], ['E', 'G', 5],  ['F', 'D', 2], ['F', 'G', 3], ['G', 'D', 10],['G', 'E', 5],['G', 'F', 3] ]
+    
+    graph = [ ['A', 'F', 1], ['A', 'G', 8], ['A', 'B', 3], ['B', 'A', 3], ['B', 'C', 4], ['B', 'D', 1], ['B', 'F', 1], ['B', 'G', 6], ['C', 'B', 4], ['C', 'D', 1], ['C', 'E', 2], ['D', 'B', 1], ['D', 'C', 1], ['D', 'E', 5], ['E', 'C', 2], ['E', 'D', 5], [ 'F', 'A', 1], ['F', 'B', 1], ['G', 'A', 8], ['G', 'B', 6]  ]
+    (route, distance) = route_algoritm('A', 'E', graph)
+    # print_info((route,distance))
